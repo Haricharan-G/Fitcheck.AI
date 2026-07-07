@@ -293,33 +293,33 @@ export interface StaticExercise extends BaseExercise {
 export type ExerciseConfig = DynamicExercise | StaticExercise;
 
 function getExerciseDemoUrl(exerciseId: string): string {
-  const internetImages: Record<string, string> = {
-    squat: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1469&auto=format&fit=crop",
+  const images: Record<string, string> = {
+    squat: "/demos/squat.png",
     pushUp: "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?q=80&w=1469&auto=format&fit=crop",
-    lunge: "https://images.unsplash.com/photo-1434682881908-b43d0467b798?q=80&w=1474&auto=format&fit=crop",
+    lunge: "/demos/lunge.avif",
     bicepCurl: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop",
-    shoulderPress: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop",
-    deadlift: "https://images.unsplash.com/photo-1603287681836-b174ce5074c2?q=80&w=1471&auto=format&fit=crop",
-    gluteBridge: "https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?q=80&w=1469&auto=format&fit=crop",
-    birdDog: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1470&auto=format&fit=crop",
-    plank: "https://images.pexels.com/photos/136404/pexels-photo-136404.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    treePose: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80",
-    warriorII: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80",
-    trianglePose: "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&q=80&w=1470",
-    chairPose: "https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=1470",
-    downwardDog: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1520&auto=format&fit=crop",
-    cobraPose: "https://images.unsplash.com/photo-1552286450-37b587d6050b?q=80&w=1470&auto=format&fit=crop",
-    overheadStretch: "https://images.unsplash.com/photo-1598284534720-3b47bd0268cc?auto=format&fit=crop&q=80&w=1470",
-    sideBend: "https://images.unsplash.com/photo-1627483262268-9c2b5b32905f?auto=format&fit=crop&q=80&w=1470",
-    hamstringStretch: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&q=80&w=1470",
-    forwardFold: "https://images.unsplash.com/photo-1552196563-55276e0d9b4b?auto=format&fit=crop&q=80&w=1470",
+    shoulderPress: "/demos/shoulder press.jpeg",
+    deadlift: "/demos/Deadlift.jpeg",
+    gluteBridge: "/demos/Glute Bridge.jpeg",
+    birdDog: "/demos/bird dog.png",
+    plank: "/demos/plank.jpeg",
+    treePose: "/demos/Tree Pose.jpeg",
+    warriorII: "/demos/Warrior II.jpeg",
+    trianglePose: "/demos/Triangle Pose.jpeg",
+    chairPose: "/demos/Chair Pose.jpeg",
+    downwardDog: "/demos/Downward Dog.jpeg",
+    cobraPose: "/demos/cobra pose.jpeg",
+    overheadStretch: "/demos/overhead stretch.jpeg",
+    sideBend: "/demos/Side Bend.jpeg",
+    hamstringStretch: "/demos/Hamstring Stretch.jpeg",
+    forwardFold: "/demos/Forward Fold.jpeg",
   };
 
-  if (internetImages[exerciseId]) {
-    return internetImages[exerciseId];
+  if (images[exerciseId]) {
+    return images[exerciseId];
   }
-
-  return "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1470&auto=format&fit=crop";
+  
+  return "/demos/squat.png";
 }
 
 function getExerciseVideoUrl(exerciseId: string): string {
